@@ -1,5 +1,6 @@
 public class ContactsListController {
    private String sortOrder = 'LastName';
+   //TEst change
     
 public List<Contact> getContacts() {
     
