@@ -1,0 +1,6 @@
+<apex:page standardController="Service_Request__c" extensions="TestupdateSR">        
+        <apex:form >
+            Enter Favourite Park :  <apex:inputText value="{!FavPark}"/>
+            <apex:commandButton action="{!setexecute}" value="Update"/>
+    </apex:form>
+</apex:page>

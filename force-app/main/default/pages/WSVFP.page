@@ -1,0 +1,6 @@
+<apex:page controller="WSController1">
+<apex:pageBlock title="Addtion">
+    {!doAdd}
+    
+    </apex:pageBlock>
+</apex:page>

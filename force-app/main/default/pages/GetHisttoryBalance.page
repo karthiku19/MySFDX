@@ -1,0 +1,15 @@
+<apex:page standardController="Service_Request__c" extensions="HistoryController">
+    <apex:form >
+        <apex:pageBlock >
+        	<apex:pageBlockTable value="{!Audit1}" var="a">
+                  <apex:column Value="{!a.Field}" headerValue="Recharge Type"/>
+                <apex:column value="{!a.CreatedDate}" headerValue="Transaction Date"/>
+                  <apex:column value="{!a.NewValue}" headerValue="Current Balance"/> 
+                <apex:column value="{!a.OldValue}" headerValue="Previous Balance">
+                </apex:column>
+            	
+            </apex:pageBlockTable>
+        
+        </apex:pageBlock>    
+    </apex:form>
+</apex:page>

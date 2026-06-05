@@ -1,0 +1,10 @@
+<apex:page standardController="Account">
+    <apex:pageBlock title="Account">
+        <b>Name : 	{!Account.Name} </b>
+        
+    <p>
+        <b>Active :  {!Account.Active__c}</b>
+        </p> 
+    </apex:pageBlock>
+    
+</apex:page>

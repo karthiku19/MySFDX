@@ -1,0 +1,19 @@
+<apex:page standardController="Tour_Expense__c" extensions="AddExp">    
+     <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockSection title="Add Expense Details">   
+     <apex:inputField label="Expense Name" value="{!Tour_Expense__c.Name}"/>  <br/>
+   	 <apex:inputField label="Expense Type" value="{!Tour_Expense__c.Expense_Type__c}"/>  <br/>
+	 <apex:inputField label="Expense Spent By" value="{!Tour_Expense__c.People__c}" /> <br/>
+     <apex:inputField label="Amount" value="{!Tour_Expense__c.Amount__c}"/> <br/>
+        <apex:commandButton action="{!Next}" value="Next">
+        </apex:commandButton>
+        
+
+        
+ </apex:pageBlockSection>        
+   
+         
+        </apex:pageBlock>
+          </apex:form>
+</apex:page>

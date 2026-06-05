@@ -1,0 +1,42 @@
+<template>
+    <lightning-layout class="Container" multiple-rows="">
+        <lightning-layout-item size="12">
+            <div class="intro">{intro}</div>
+        </lightning-layout-item>
+
+
+        <lightning-layout-item size="12">
+            <div class="time"> {time} </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="10">
+            
+            <lightning-button-icon title="Go" onclick={buttonHandler}></lightning-button-icon>
+        </lightning-layout-item>       
+        <lightning-layout-item size="12" large-device-size="6" medium-device-size="10" small-device-size="12">
+            <lightning-layout>
+                <lightning-layout-item size="9">
+                    <div>
+                        <table>
+                            <tr>
+                              <td><lightning-input class="inp" type="text" label="Input" data-name="input1" onchange={handleChange} ></lightning-input></td>
+                              <td><lightning-input class="inp" type="text" label="Input" data-name="input2" onchange={handleChange} ></lightning-input></td>
+                              <td><lightning-input class="inp" type="text" label="Input" data-name="input3" onchange={handleChange} ></lightning-input></td>
+                            </tr>
+                            <tr>
+                              <td><lightning-input class="inp" type="text" label="Input" data-name="input4" onchange={handleChange} ></lightning-input></td>
+                              <td><lightning-input class="inp" type="text" label="Input" data-name="input5" onchange={handleChange} ></lightning-input></td>
+                              <td><lightning-input class="inp" type="text" label="Input" data-name="input6" onchange={handleChange} ></lightning-input></td>
+                            </tr>
+                            <tr>
+                              <td><lightning-input class="inp" type="text" label="Input" data-name="input7" onchange={handleChange} ></lightning-input></td>
+                              <td><lightning-input class="inp" type="text" label="Input" data-name="input8" onchange={handleChange} ></lightning-input></td>
+                              <td><lightning-input class="inp" type="text" label="Input" data-name="input9" onchange={handleChange} ></lightning-input></td>
+                            </tr>
+                          </table>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

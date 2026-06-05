@@ -1,0 +1,3 @@
+<apex:page >
+    <apex:pageBlock title="Favorite Park has been selected!!!"> </apex:pageBlock>
+</apex:page>

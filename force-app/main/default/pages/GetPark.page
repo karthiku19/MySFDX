@@ -1,0 +1,13 @@
+<apex:page standardController="Service_Request__c" extensions="GetPark" >
+    <apex:pageMessages />
+    <apex:form >
+        <apex:selectRadio value="{!Park}"><br/>
+        <apex:selectOptions value="{!CountryPark}"/> 
+        </apex:selectRadio>
+        <apex:commandButton value="Check" action="{!SetthePark}">
+            <apex:param name="Park" assignTo="{!Park}" value="{!CountryPark}"/>
+        </apex:commandButton>
+        
+     </apex:form>
+     
+</apex:page>

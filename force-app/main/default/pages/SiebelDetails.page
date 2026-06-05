@@ -1,0 +1,11 @@
+<apex:page showHeader="false" sidebar="False" controller="GetSRDetails">
+
+    
+<apex:form >
+
+  SR ID : <apex:inputText value="{!inputText1}"/>
+  
+
+    <apex:commandButton value="Get SR Details" action="{!saveList}"/>
+</apex:form>
+</apex:page>

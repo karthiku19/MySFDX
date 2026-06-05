@@ -1,0 +1,16 @@
+<apex:page standardController="Service_Request__c" extensions="QuestionareController" > 
+      
+<apex:form >
+    <apex:inputText value="{!Answer}"/>
+    <apex:inputText value="{!Answer}"/>
+
+    
+      <apex:repeat value="{!Questions}" var="Questions" id="theRepeat">
+         <apex:outputText value="{!Questions}" id="theValue"/> <apex:inputText value="{!Answer}"/>
+          
+
+         <br/>
+     </apex:repeat>
+    <apex:commandButton action="{!CheckforCorrectness}" value="Check" />
+    </apex:form>
+</apex:page>

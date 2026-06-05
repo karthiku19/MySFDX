@@ -1,0 +1,5 @@
+<apex:page standardController="Service_Request__c" sidebar="true">
+    <apex:pageBlock >
+        <apex:iframe src="https://www.google.com/maps/" scrolling="true" id="theIframe"/> 
+    </apex:pageBlock>
+</apex:page>

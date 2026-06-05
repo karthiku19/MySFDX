@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:pageBlock title="Ericsson Order Care">
+          <font size="6" color="blue">Please go to Service Request Screen to Place the next order </font>
+           <apex:image alt="Ericsson Order Care" title="EOC"
+                        url="{!URLFOR($Resource.Santiago, 'Santiago.jpg')}"  width="1400" height="900"/>
+            
+    </apex:pageBlock>
+
+</apex:page>

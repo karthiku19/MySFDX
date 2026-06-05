@@ -1,0 +1,18 @@
+.Time
+{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.Intro
+{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.Container
+{
+    background-color: white;
+    padding: auto;
+    max-height: 480px;
+}

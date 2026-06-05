@@ -1,0 +1,46 @@
+<apex:page standardController="Sales_Order__c" extensions="CustomerPortalController" sidebar="false">
+      <style>
+  /*for page block */     
+/*.bPageBlock{
+        width : 50%;
+        }
+        
+        /*for page block section*/
+       .pbSubheader {
+          width : 100%
+        }*/
+    </style>
+    <apex:pageBlock >
+        <apex:pageblockSection title="Account Information" >
+            <apex:pageBlockTable value="{!Acct}" var="acc" id="table1" title="All Accounts" style="width:100%">
+        		   <apex:column value="{!acc.Name}" title="Name" style="width:250px" />
+                <apex:column value="{!acc.AccountNumber}" title="Name" style="width:250px" />
+                <apex:column value="{!acc.Contact_Email__c}" title="Name" style="width:250px" />
+                 <apex:column value="{!acc.ShippingStreet}" title="Street" />
+                <apex:column value="{!acc.ShippingCity}" title="City" />
+                <apex:column value="{!acc.ShippingPostalCode}" title="Postal Code" />
+                <apex:column value="{!acc.ShippingState}" title="State" />
+                <apex:column value="{!acc.ShippingCountry}" title="Country" /> 
+                </apex:pageBlockTable>  
+         </apex:pageblockSection>        
+        <apex:pageblockSection title="Contract Information" >
+            <apex:pageBlockTable value="{!SalesOrder}" var="SO" id="table2" title="Contract Details" style="width:100%">
+        		   <apex:column value="{!SO.Name}" title="Name" style="width:250px" />
+                 <apex:column value="{!SO.Contract_Start_Date__c}" title="Start Date" />
+                <apex:column value="{!SO.Contract_End_Date__c}" title="End Date" />    
+                </apex:pageBlockTable>  
+        </apex:pageblockSection>
+        <apex:pageblockSection title="Product Information" >
+            <apex:pageBlockTable value="{!OrderListItem}" var="Olit" id="table3" title="Product Details" style="width:100%">
+        		   <apex:column value="{!Olit.ProductName__c}" title="Name" style="width:250px" />
+                 <apex:column value="{!Olit.Service_Cost__c}" title="Start Date" />  
+                <apex:column value="{!Olit.Rate_Code__c}" title="Start Date" />  
+                <apex:column value="{!Olit.Start_Date__c}" title="Start Date" />  
+                <apex:column value="{!Olit.End_Date__c}" title="Start Date" />  
+                <apex:column value="{!Olit.Status__c}" title="Start Date" />  
+                </apex:pageBlockTable>  
+        </apex:pageblockSection>
+        
+        
+    </apex:pageBlock>
+</apex:page>

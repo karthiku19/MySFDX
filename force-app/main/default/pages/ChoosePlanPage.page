@@ -1,0 +1,16 @@
+<apex:page standardController="Service_Request__c" extensions="ChoosePlan">
+    <apex:form >
+        <apex:pageBlock title="Below are the plan available!" id="pb">
+        	<apex:pageBlockTable value="{!Plan1}" var="a">
+              	  <apex:column Value="{!a.Id}" headerValue="Plan Id"/>
+                  <apex:column Value="{!a.Name}" headerValue="Plan Name"/>
+                <apex:column value="{!a.Data__c}" headerValue="Data %"/>
+                  <apex:column value="{!a.SMS__c}" headerValue="SMS %"/> 
+                <apex:column value="{!a.Voice__c}" headerValue="Voice %"></apex:column>
+               <apex:column headerValue="Select"><apex:commandButton value="Select" action="{!UpdAst}" reRender="pb">
+                   <apex:param name="Plan" assignTo="{!Plan}" id="p1" value="{!a.Id}"/></apex:commandButton>
+                   </apex:column>
+            </apex:pageBlockTable>
+</apex:pageBlock>
+    </apex:form>
+</apex:page>

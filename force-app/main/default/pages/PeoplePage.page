@@ -1,0 +1,15 @@
+<apex:page standardController="Tour__c" extensions="AddExpenseTrigger">    
+     <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockSection title="To Proceed please click on Next">   
+        <apex:commandButton action="{!Trig}" value="Next">
+        </apex:commandButton>
+        
+
+        
+ </apex:pageBlockSection>        
+   
+         
+        </apex:pageBlock>
+          </apex:form>
+</apex:page>

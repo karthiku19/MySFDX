@@ -1,0 +1,18 @@
+<apex:page standardController="Service_Request__c" extensions="WSController1">
+ <apex:form >
+    <apex:pageBlock title="Ericsson Order Care">
+        <apex:commandButton action="{!udpateSR}" value="OK" />
+        {!Service_Request__c.Name}
+          <font size="6" color="blue"> Your Order has been Placed successfully in EOC! And your shopping Cart Number :'{!doAdd}' </font>
+
+            
+     
+               
+
+           <apex:image alt="Ericsson Order Care" title="EOC"
+                        url="{!URLFOR($Resource.Santiago, 'Santiago.jpg')}"  width="1400" height="900"/>
+            
+    </apex:pageBlock>
+
+    </apex:form>
+</apex:page>

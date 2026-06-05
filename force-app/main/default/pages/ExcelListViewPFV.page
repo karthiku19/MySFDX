@@ -1,0 +1,12 @@
+<apex:page standardController="Account_Summary__c" extensions="FileUploader">
+    <apex:form >
+        
+        <apex:pageBlock title="Uploaded Excel!" id="pb">
+            <apex:pageBlockTable value="{!wrapper}" var="a" >
+               <apex:column Value="{!a.Debit}" headerValue="Debit"/>
+                  <apex:column Value="{!a.Credit}" headerValue="Credit"/>
+                <apex:column value="{!a.Balance}" headerValue="Balance"/>                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
