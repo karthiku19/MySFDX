@@ -1,0 +1,57 @@
+<template>
+    <div class="card-wrapper">
+        <!-- Header -->
+        <div class="card-header">
+            <span class="header-title">My Accounts</span>
+        </div>
+
+        <!-- Loading -->
+        <template if:true={isLoading}>
+            <div class="loading-container">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+
+        <!-- Error -->
+        <template if:true={error}>
+            <div class="error-box">
+                <p>Error loading accounts. Please try again.</p>
+            </div>
+        </template>
+
+        <!-- Account List -->
+        <template if:true={hasAccounts}>
+            <div class="account-list">
+                <template for:each={accounts} for:item="account">
+                    <div key={account.Id} class="account-card">
+                        <!-- Avatar + Info -->
+                        <div class="card-left">
+                            <div class="avatar" style={account.avatarStyle}>
+                                {account.avatarLetter}
+                            </div>
+                            <div class="account-info">
+                                <p class="account-name">{account.Name}</p>
+                                <p class="account-detail">Industry: {account.Industry}</p>
+                                <p class="account-detail">Phone: {account.Phone}</p>
+                            </div>
+                        </div>
+                        <!-- Revenue + Rating -->
+                        <div class="card-right">
+                            <p class="revenue-label">Annual Revenue</p>
+                            <p class="revenue-amount">{account.formattedRevenue}</p>
+                            <p class="rating-row">
+                                Rating&nbsp;
+                                <span class={account.ratingClass}>{account.Rating}&nbsp;{account.ratingIcon}</span>
+                            </p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <!-- Footer Count -->
+        <div class="card-footer">
+            <span>Showing {displayCount} of {totalCount} Accounts</span>
+        </div>
+    </div>
+</template>
